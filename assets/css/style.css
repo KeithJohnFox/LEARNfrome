@@ -1,0 +1,261 @@
+/* Font face used to import downloaded fonts to the file, selecting the path */
+@font-face {
+    font-family: Bellota_LightItalic;
+    src: url("../fonts/Bellota-Italic.otf");
+}
+
+/* Bold font */
+@font-face {
+    font-family: Bellota_BoldItalic;
+    src: url("../fonts/Bellota_BoldItalic.otf");
+}
+
+/* This stops blue focus box showing around my input fields */
+input:focus, textarea:focus {
+    outline: none;
+}
+
+
+body {
+    line-height: 17px;
+    background-color: #E6EAE8;
+}
+
+/* NAVBAR STYLING */
+.top_bar {
+    z-index: 10;
+    width: 100%;
+    min-width: 1050px;
+    height: 40px;
+    background-color: #161f29;
+    border-bottom: 5px solid #1e2e3b;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    position: fixed;
+}
+
+/* .top_bar img {
+  height: 30px;
+} */
+
+/* NAVBAR LOGO */
+.logo a {
+    font-family: 'Bellota_BoldItalic', sans-serif;
+    margin-left: 10px;
+    font-size: 30;
+    position: relative;
+    top: 9px;
+    text-shadow: rgb(255, 255, 255) 0.5px 0.5px 0px;
+    color: #fff;
+
+}
+/* stops the logo text underline when I hover over it */
+a:hover {
+    text-decoration: none;
+}
+
+/* Navbar Css */
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin: 10;
+}
+
+nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Everything under nav bar */
+.wrapper {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+    padding: 0 10px;
+    width: 75%;
+    min-width: 950px;
+}
+
+/* User Picture Box */
+.column {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px #D3D3D3;
+    z-index: -1;
+}
+
+/* User Picture Box */
+.user_details {
+    width: 250px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* User detaila (Likes Posts) */
+.user_details_left_right {
+    width: 125px;
+    display: inline-block;
+    position: absolute;
+}
+
+/* User Profile Picture */
+.user_details img {
+    height: 125px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Affects status post box */
+.main_column {
+    float: right;
+    width: 72%;
+    z-index: -1;
+    min-height: 160px;
+}
+
+/* Status form  */
+.post_form {
+    width: 100%;
+}
+
+/* Status Text Box */
+.post_form textarea {
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #D3D3D3;
+    font-size: 12px;
+    padding: 5px;
+    min-height: 30px;
+    max-height: 150px;
+}
+
+/* Stops blue box on text box */
+textarea:focus {
+    outline: 0;
+}
+
+/* Post Button */
+.post_form input[type="submit"] {
+    width: 65px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    font-family: 'Bellota_BoldItalic', sans-serif;
+    color: #fff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    font-size: 90%;
+    position: absolute;
+    outline: 0;
+    margin: 0;
+}
+
+/* When the post button is pressed it gives a little animation movement */
+.post_form input[type="submit"]:active {
+    padding: 5px 4px 2px 5px;
+}
+
+/* Styling Posts includes (Profile pic, status text, name, timestamp, padding container) */
+.status_post {
+    width: 95%;
+    font-size: 16px;
+    padding: 0px 12px;
+    min-height: 75px;
+}
+
+.post_profile_pic {
+  float: left;
+  margin-right: 8px;
+}
+
+.post_profile_pic img {
+  border-radius: 4px
+}
+
+.profile_left {
+    top: -10px;
+    width: 17%;
+    max-width: 240px;
+    min-width: 130px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: #2a2f38;
+    /* border-right: 10px solid #2C3E50; */
+    color: #CBEAF8;
+    margin-right: 20px;
+}
+
+.profile_left img {
+    min-width: 80px;
+    width: 55%;
+    margin: 20px 35px 20px 35px;
+    border: 5px solid #83D6FE;
+    border-radius: 100px;
+}
+
+.profile_info {
+  display: list-item;
+  background-color: rgb(57, 82, 107);
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.profile_info p {
+  margin: 0 0 0 20px;
+  word-wrap: break-word;
+}
+
+/*Button Styling*/
+.default {
+    background-color: #bdc3c7;
+}
+.deep_blue {
+    background-color: #0043f0;
+}
+.info  {
+    background-color: #3498db;
+}
+.success {
+    background-color: #2ecc71;
+}
+.warning {
+    background-color: #f0ad4e;
+}
+.danger {
+    background-color: #e53935 ;
+}
+
+/*User profile bar on left, styling buttons eg Add friend*/
+.profile_left input[type="submit"] {
+    width: 80%;
+    height: 30px;
+    margin: 8px 15px 0 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.main_column input[type="submit"] {
+    width: 12%;
+    height: 25px;
+    margin: 5px;  
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    
+}
+
+
+
+
+
+
+
