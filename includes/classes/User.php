@@ -34,6 +34,15 @@ class User {
 
     }
 
+    //Grab a profile pic from the associated username
+    public function getProfilePic() {
+        $username = $this->user['username'];
+        //Gets profile pic of that username
+        $query = mysqli_query($this->con, "SELECT profile_pic FROM users WHERE username='$username'"); //Gets first and last name of user
+        $row = mysqli_fetch_array($query); //Stores profilepic in variable row
+        return $row['profile_pic']; //returns profile pic
+    }
+
     public function isClosed() {
         $username = $this->user['username'];
         $query = mysqli_query($this->con, "SELECT user_closed FROM users WHERE username='$username'");  //Here I store user_closed column into query from the user who posted it

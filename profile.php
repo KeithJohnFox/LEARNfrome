@@ -61,7 +61,7 @@ if(isset($_POST['respond_request'])) {
       <?php 
       //User object to call the user
       $profile_user_obj = new User($con, $username); 
-      //If statement calls isClosed function in User class, if functionr returns true then user is closed / deactivated
+      //If statement calls isClosed function in User class, if function returns true then user is closed / deactivated
       if($profile_user_obj->isClosed()) {
         header("Location: user_closed.php");
       }
@@ -131,12 +131,11 @@ if(isset($_POST['respond_request'])) {
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Post</button>
+            <button type="button" class="btn btn-primary" name="post_button" id="submit_profile_post">Post</button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </body>
 </html>

@@ -18,7 +18,12 @@ input:focus, textarea:focus {
 
 body {
     line-height: 17px;
-    background-color: #E6EAE8;
+    background-color: #F5F5F5;
+}
+
+a {
+    color: #20AAE5;
+    text-decoration: none;
 }
 
 /* NAVBAR STYLING */
@@ -168,6 +173,7 @@ textarea:focus {
     font-size: 16px;
     padding: 0px 12px;
     min-height: 75px;
+    cursor: pointer;
 }
 
 .post_profile_pic {
@@ -251,6 +257,74 @@ textarea:focus {
     border-radius: 5px;
     color: #fff;
     
+}
+
+#comment_iframe {
+    max-height: 250px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.comment_section {
+     padding: 0 5px 5px 5px;
+}
+
+.comment_section img{
+    margin: 0 3px 3px 3px;
+    border-radius: 3px;
+}
+
+#comment_form textarea {
+    border-color: #D3D3D3;
+    width: 70%;
+    height: 35px;
+    border-radius: 5px;
+    color: #616060;
+    font-size: 14px;
+    margin: 3px 3px 3px 3px;
+}
+
+#comment_form input[type="submit"] {
+    border: none;
+    background-color: mediumaquamarine;
+    border-radius: 5px;
+    width: 10%;
+    margin-top: 3px;
+    height: 25px;
+    position: absolute;
+    font-family: 'Bellota_BoldItalic', sans-serif;
+    color: #fff;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+
+}
+
+.newsfeedPostOptions{
+    padding: 0px;
+    text-decoration: none;
+    color: #A0A0A0;
+    border: none;
+}
+
+.newsfeedPostOptions iframe {
+    height: 25px;
+    width: 120px;
+    border: 0px;
+}
+
+.comment_like {
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    color: #3498db;
+    padding: 0; 
+    height: auto;
+    width:auto;
+    margin: 0;      
+}
+
+.like_value {
+    display: inline;
+    font-size: 14px;
 }
 
 

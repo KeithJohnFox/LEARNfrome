@@ -1,0 +1,17 @@
+{
+    "name": "keith/myproject",
+    "description": "Learnfrome Firebase",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "Keith Fox",
+            "email": "x16779289@student.ncirl.ie"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.35",
+        "php": ">= 7.2.0"
+    }
+}

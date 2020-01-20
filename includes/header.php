@@ -22,8 +22,11 @@ else {
     <title>LEARNfrome</title>
 
     <!-- JavaScript Links -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery Link -->
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/learnfrome.js"></script>
+    
 
     <!-- CSS Links-->
     <script src="https://kit.fontawesome.com/88a64f9c03.js"></script>

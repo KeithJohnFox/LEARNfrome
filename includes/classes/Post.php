@@ -119,7 +119,6 @@ class Post {
                 ?>
                 <script>
                   function toggle<?php echo $id; ?>() {
-
                     var target = $(event.target);
                     if(!target.is("a")){
                       var element = document.getElementById("toggleComment<?php echo $id; ?>");
@@ -133,7 +132,10 @@ class Post {
                     }
                   }
                 </script>
-                <?php
+                  <?php
+
+                  $comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
+                  $comments_check_num = mysqli_num_rows($comments_check);
 
                 //TIMEFRAME OF POST LOGIC
                 $date_time_now = date("Y-m-d H:i:s");
@@ -164,10 +166,10 @@ class Post {
 
                     //How many months old
                     if($interval->m == 1) {
-                        $time_message = $interval->m . " month". $days;
+                        $time_message = $interval->m . " month ". $days;
                     }
                     else {
-                        $time_message = $interval->m . " months". $days;
+                        $time_message = $interval->m . " months ". $days;
                     }
                 }
                 //Post at least a day old
@@ -219,6 +221,12 @@ class Post {
                             <div id='post_body'>
                                 $body
                                 <br>
+                                <br>
+                                <br>
+                            </div>
+                            <div class='newsfeedPostOptions'>
+                                Comments($comments_check_num)&nbsp;&nbsp;&nbsp;
+                                <iframe src='like.php?post_id=$id' scrolling='no'></iframe>
                             </div>
                         </div>
                         <div class='post_comment' id='toggleComment$id' style='display:none;'>
