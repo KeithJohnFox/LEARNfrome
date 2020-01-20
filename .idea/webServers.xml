@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="30ce4329-0303-40c8-ba1d-1ffc13750723" name="learnfrome" url="http://localhost/learnfrome/register.php">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\learnfrome" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
