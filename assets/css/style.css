@@ -260,7 +260,8 @@ textarea:focus {
 }
 
 #comment_iframe {
-    max-height: 250px;
+    max-height: 500px;
+    height: 35%;
     width: 100%;
     margin-top: 5px;
 }
@@ -327,6 +328,66 @@ textarea:focus {
     font-size: 14px;
 }
 
+/*-----------------------MESSAGING CHAT STYLING------------------------*/
+#message_textarea {
+    width: 80%;
+    height: 50px;
+    margin-right: 6px;
+    border-radius: 5px;
+    border: 1.5px solid rgba(194, 194, 194, 0.83);
+    padding: 6px 5px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+#message_submit {
+    /*background-image: url("../images/icons/sendmessage.png");*/
+    width: 95px;
+    height: 32px;
+    margin-top: 8px;
+    position: absolute;
+    border: none;
+    background-color: #93DB70;
+    color: #fcfcfc;
+    border-radius: 15px;
+    font-family: 'bellota-BoldItalic', 'Lucida Grande', sans-serif;
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+
+.message_post {
+    margin-top: 20px;
+}
+
+.message {
+    border: 1px; solid #000;
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #fff;
+}
+
+.message#blue {
+    background-color: #3498db;
+    border-color: #2980b9;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.message#green {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.loaded_messages {
+    height: 65%;
+    min-height: 300px;
+    max-height: 400px;
+    overflow: auto;
+    margin-bottom: 10px;
+    /*overflow-x: hidden;*/
+}
 
 
 
