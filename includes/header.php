@@ -2,6 +2,7 @@
 require 'config/config.php';
 include("includes/classes/User.php");    //Includes User Class to index page
 include("includes/classes/Post.php");    //Includes Post Class to index page
+include("includes/classes/Message.php");    //Includes Message Class to index page
 
 //If this session variable is set make the userloggedIn variable username
 //This stops users access the website without logging in
@@ -43,7 +44,7 @@ else {
         <nav>
             <a href="#"><?php echo $user['first_name']; ?></a>  <!-- displays username through user variable and selecting first name-->
             <a href="index.php"><i class="fas fa-home fa-lg"></i></a>
-            <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
+            <a href="messages.php"><i class="fas fa-envelope fa-lg"></i></a>
             <a href="#"><i class="far fa-bell fa-lg"></i></a>
             <a href="requests.php"><i class="fas fa-users fa-lg"></i></i></a>
             <a href="#"><i class="fas fa-user-cog fa-lg"></i></a>
