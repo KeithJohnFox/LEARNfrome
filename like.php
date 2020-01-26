@@ -37,7 +37,7 @@
     //Get the id of post
     if(isset($_GET['post_id'])){
         $post_id = $_GET['post_id'];
-        
+
     }
 
     $get_likes = mysqli_query($con, "SELECT likes, added_by FROM posts WHERE id='$post_id'");
@@ -57,7 +57,7 @@
 		$query = mysqli_query($con, "UPDATE posts SET likes='$total_likes' WHERE id='$post_id'");
 		$total_user_likes++;
 		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
-		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES('', '$userLoggedIn', '$post_id')");
+		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES(NULL, '$userLoggedIn', '$post_id')");
 
 		//Insert Notification
 	}

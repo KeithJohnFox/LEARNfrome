@@ -141,6 +141,7 @@ if(isset($_POST['respond_request'])) {
     <!-- Loads all posts to limit, with loading gif -->
 <script>
     var userLoggedIn = '<?php echo $userLoggedIn; ?>';
+    var profileUsername = '<?php echo $username; ?>';
 
     $(document).ready(function() {
 
@@ -148,9 +149,9 @@ if(isset($_POST['respond_request'])) {
 
         //Ajax request for loading first posts
         $.ajax({
-            url: "includes/handlers/ajax_load_posts.php",
+            url: "includes/handlers/ajax_load_profile_posts.php",
             type: "POST",
-            data: "page=1&userLoggedIn=" + userLoggedIn,
+            data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
             cache:false,
 
             success: function(data) {
@@ -169,9 +170,9 @@ if(isset($_POST['respond_request'])) {
                 $('#loading').show();
 
                 var ajaxReq = $.ajax({
-                    url: "includes/handlers/ajax_load_posts.php",
+                    url: "includes/handlers/ajax_load_profile_posts.php",
                     type: "POST",
-                    data: "page=" + page + "&userLoggedIn=" + userLoggedIn,
+                    data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
                     cache:false,
 
                     success: function(response) {
