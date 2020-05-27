@@ -20,6 +20,7 @@
     require 'config/config.php';
     include("includes/classes/User.php");    //Includes User Class to index page
     include("includes/classes/Post.php");    //Includes Post Class to index page
+    include("includes/classes/Notification.php");    //Includes Notification Class to index page
 
     //If this session variable is set make the userloggedIn variable username
     //This stops users access the website without logging in
@@ -59,7 +60,12 @@
 		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
 		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES(NULL, '$userLoggedIn', '$post_id')");
 
-		//Insert Notification
+		//Insert Notification for likes
+        if($user_liked != $userLoggedIn) {
+            $notification = new Notification($con, $userLoggedIn);
+            //sends id of post submitted to insertNotification function
+            $notification->insertNotification($post_id, $user_liked, "like");
+        }
 	}
 	//Unlike button
 	if(isset($_POST['unlike_button'])) {

@@ -5,9 +5,11 @@
 
     $timezone = date_default_timezone_set("Europe/Dublin"); //sets the default time to dublin
 
-    // if statement is used if there is an error by using the errno command AND the . is append allowing you to join 2 strings
+
+     //if statement is used if there is an error by using the errno command AND the . is append allowing you to join 2 strings
     if(mysqli_connect_errno())
     {
         echo "Failed to connect: " . mysqli_connect_errno();
     }
+
 ?>

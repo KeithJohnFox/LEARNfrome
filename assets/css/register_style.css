@@ -9,6 +9,16 @@
     src: url("../fonts/Bellota_BoldItalic.otf");
 }
 
+@font-face {
+    font-family: Nunito_Regular;
+    src: url("../fonts/Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: Nunito_Bold;
+    src: url("../fonts/Nunito-Bold.ttf");
+}
+
 /* This stops blue focus box showing around my input fields */
 input:focus, textarea:focus {
     outline: none;
@@ -21,7 +31,8 @@ html , body {
 
 /* anything with a form tag style all text to center */
 form {
-    text-align: center;           
+    text-align: center;
+    /* height: 220; */
 }
 
 body {
@@ -43,6 +54,13 @@ a {
     min-width: 950px;
 }
 
+.login_header img {
+    height: 60px;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-right: 40px;
+}
+
 /* login box contains the form section */
 .login_box{
     font-family: Bellota_LightItalic, sans-serif;
@@ -52,18 +70,16 @@ a {
     top: 8%;
     width: 35%;
     background-color: white;
-    border: 1px solid #EDEDED;
     border-radius: 7px;
     opacity: 0.95;
-    
-    
-       
+    box-shadow: 0px 0px 3px 4px #ff9100e0;
 }
+
+
 
 /* login and register heading box and element design */
 .login_header {
-    font-family: Bellota_LightItalic, sans-serif;
-    width: 100%;    
+    width: 100%;
     height: 99px;
     background-color: #34495e;
     color: #fff;
@@ -71,33 +87,16 @@ a {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     margin-bottom: 20px;
-
 }   
-
-.login_header h1 {
-    font-family: Bellota_BoldItalic, sans-serif;
-    margin: -1px;
-    margin-right: 1px;
-    margin-left: 2px;
-    margin-bottom: 0;
-    color: #7f8fa6;   
-    text-shadow: #000 0.5px 0.5px 0px;  
-    font-size: 300%;
-    
-}
-
-.login_header span {
-    color: #00a8ff;
-}
 
 /* Submit buttons */
 input[type="submit"] {  /* targets any input fields with the type submit */
     background-color: #3498db;
     border: 1px solid #3498db;
     border-radius: 3px;
-    padding: 5px 10px 5px 10px; 
+    padding: 5px 10px 5px 10px;
     margin: 10px 0px 15px 0px;
-    color: white;   
+    color: white;
     font-family: Bellota_BoldItalic, sans-serif;
     font-size: 100%;
 }
@@ -111,6 +110,7 @@ input[type="text"], input[type="email"], input[type="password"]  {
     height: 35px;
     margin-bottom: 10px;
     padding-left: 5px;
+    font-family: Nunito_Regular, sans-serif;
 }
 
 /* Highlighting design when hovering over input boxes (Displays blue border) */

@@ -30,8 +30,12 @@
         <div class="login_box">
             <div class="login_header"> <!-- Header class for login page -->
             <!-- <img src="assets/css/iqmelogo.PNG" ALT="some text" WIDTH=70 HEIGHT=70> -->
-                <h1><span>LEARN</span>frome!</h1>
-                Login or sign up below
+            <img href="index.php" border="0" alt="Learnfrome" src="assets/images/icons/learnfromeLogo2.png">
+                <!-- <h1><span>LEARN</span>frome!</h1> -->
+                <div class="text">
+                    Login or sign up below
+                </div>
+                
             </div>
 
             <div id="first">
@@ -65,7 +69,8 @@
                     <br>
                     <?php
                     //Prints out error message!
-                    if(in_array("First name must be between 2 and 25 characters long<br>", $error_array)) echo "<font color=red>First name must be between 2 and 25 characters long<br>";  ?>    <!-- Using in_array, pushes error message into array var and then echo error message -->
+                    if(in_array("First name must be between 2 and 25 characters long<br>", $error_array)) echo "<font color=red>First name must be between 2 and 25 characters long<br>";      //<!-- Using in_array, pushes error message into array var and then echo error message -->
+                    if(in_array("Your fname can only contain letters and numbers<br>", $error_array)) echo "<font color=red>Your First can only contain letters and numbers<br>";  ?>
 
                     <!-- LAST NAME SAVE & ERROR MESSAGE -->
                     <input type="text" name="reg_lname" placeholder="Last Name" value="<?php
@@ -74,8 +79,10 @@
                     }
                     ?>" required>
                     <br>
-                    <?php if(in_array("Last name must be between 2 and 25 characters long<br>", $error_array)) echo "<font color=red>Last name must be between 2 and 25 characters long<br>";  ?>
-
+                    <?php 
+                    if(in_array("Last name must be between 2 and 25 characters long<br>", $error_array)) echo "<font color=red>Last name must be between 2 and 25 characters long<br>";  
+                    if(in_array("Your last name can only contain letters<br>", $error_array)) echo "<font color=red>Your last name can only contain letters<br>";  ?>
+                    
                     <!-- EMAL SAVE & ERROR MESSAGE -->
                     <input type="email" name="reg_email" placeholder="Email" value="<?php
                     if(isset($_SESSION['reg_email'])) {
@@ -100,7 +107,7 @@
                     <input type="password" name="reg_password2" placeholder="Confirm Password" required>
                     <br>
                     <?php if(in_array("Please enter matching passwords<br>", $error_array)) echo "<font color=red>Please enter matching passwords<br>";      //Using in_array, pushes error message into array var and then echo error message
-                        else if(in_array("Password can only contain letters and numbers<br>", $error_array)) echo "<font color=red>Password can only contain letters and numbers<br>";
+                        else if(in_array("Alphanumeric characters and one Upper case needed for password<br>", $error_array)) echo "<font color=red>Alphanumeric characters and one Upper case needed for password<br>";
                         else if(in_array("Your password must be between 5 and 30 characters<br>", $error_array)) echo "<font color=red>Your password must be between 5 and 30 characters<br>";  ?>
 
 
